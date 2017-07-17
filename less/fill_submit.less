@@ -1,0 +1,85 @@
+@import "reset";
+@import "base";
+
+//顶部内容
+header {
+  margin-top: 1.2rem;
+  text-align: center;
+  .header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .4rem;
+    color: @c-1495F0;
+    font-weight: 600;
+  }
+  i {
+    width: .5rem;
+    height: .5rem;
+    background: url(../images/yes.png) no-repeat center;
+    background-size: contain;
+    margin-right: .2rem;
+  }
+}
+
+//主体内容
+.main {
+  margin: 1.43rem .6rem 0;
+  width: 6.3rem;
+  font-size: .3rem;
+  .progress {
+    h1 {
+      text-align: center;
+      span:not(:first-child) {
+        margin-left: 1.32rem;
+      }
+    }
+    i {
+      display: block;
+      margin: .32rem .43rem 0;
+      width: 5.3rem;
+      height: .3rem;
+      background: url(../images/progress.png) no-repeat center;
+      background-size: contain;
+    }
+  }
+  .progress-noele{
+    h1{
+      text-align: center;
+      span:first-child{
+        margin-right: 1.32rem;
+      }
+    }
+    i{
+      display: block;
+      margin: .32rem 1.73rem 0;
+      width: 2.84rem;
+      height: .34rem;
+      background: url(../images/progress2.png) no-repeat center;
+      background-size: contain;
+    }
+  }
+  >p{
+    margin-top: .71rem;
+    line-height: .5rem;
+    text-align: justify;
+  }
+  > p {
+    margin-top: .71rem;
+    line-height: .5rem;
+    text-align: justify;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 1.38rem;
+  width: 100%;
+  text-align: center;
+  .user-detail {
+    margin-top: .4rem;
+    display: block;
+    font-size: .24rem;
+    color: #666;
+  }
+}

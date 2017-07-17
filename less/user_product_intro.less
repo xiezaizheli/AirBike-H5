@@ -1,0 +1,98 @@
+@import "reset";
+@import "base";
+
+//未登陆页面头部的登录和注册
+.header {
+  width: 7.5rem;
+  height: 5rem;
+  background: linear-gradient(180deg, #2D6ABB, #448AD0);
+  position: relative;
+  .user {
+    position: absolute;
+    top:.93rem;
+    left: 2.9rem;
+    width: 1.7rem;
+    height: 1.7rem;
+    background: url(../images/user.png) no-repeat;
+    background-size: contain;
+  }
+  .btn-register-login {
+    position: absolute;
+    top:3rem;
+    left:2.27rem;
+    width: 2.96rem;
+    height: 1.36rem;
+    line-height: .88rem;
+  }
+}
+
+//邀请好友页面的头部信息
+.invite-header {
+  width: 7.5rem;
+  height: 5rem;
+  background: url(../images/invite_bg1.png) no-repeat;
+  background-size: contain;
+  position: relative;
+  .logo-box {
+    padding-top: 1.2rem;
+    li {
+      width: 100%;
+      text-align: center;
+      &:nth-child(1) {
+        height: 1.4rem;
+        background: url(../images/logo-2.png) no-repeat center;
+        background-size: contain;
+      }
+      &:nth-child(2) {
+        height: .32rem;
+        background: url(../images/logo-3.png) no-repeat center;
+        background-size: contain;
+        margin-top: .18rem;
+      }
+      &:nth-child(3) {
+        font-size: .34rem;
+        color: #fff;
+        margin-top: .26rem;
+      }
+    }
+  }
+}
+
+//邀请好友页面的邀请码信息
+.invite-detail{
+  width: 6.24rem;
+  margin: 0 .63rem;
+  li{
+    margin-top: .55rem;
+    line-height: .5rem;
+    font-size: .3rem;
+  }
+}
+
+//共有的主体内容
+.main{
+  width: 6.9rem;
+  margin: 0 .3rem;
+  padding-bottom: .8rem;
+  li{
+    margin-top: .6rem;
+    h1{
+      border-left:3px solid #1495F0;
+      padding-left: .25rem;
+      color: #333;
+      font-size:.34rem;
+    }
+    img{
+      margin-top: .3rem;
+      max-width: 100%;
+    }
+    p{
+      text-align: center;
+      width: 6.8rem;
+      margin: .25rem .05rem 0;
+      line-height: .45rem;
+      color: #666;
+      font-size:.3rem;
+    }
+  }
+}

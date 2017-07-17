@@ -1,0 +1,99 @@
+@import "reset";
+@import "base";
+
+//定义混合宏
+.px2bai(@name, @height,@px) {
+  @{name}: @px /@height *100%;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+//顶部canvas
+header {
+  position: relative;
+  width: 100%;
+  .px2bai(height, 1206, 560);
+  background: #011C2E;
+  .canvas {
+    position: absolute;
+    .px2bai(top, 560, 141);
+    left: 50%;
+    transform: translate(-50%, 0);
+    .px2bai(width, 750, 260);
+    .px2bai(height, 560, 260);
+    background: url(../images/credit_circle.png) no-repeat center;
+    background-size: contain;
+  }
+  .tip{
+    position: absolute;
+    .px2bai(top, 560, 141);
+    .px2bai(right,750,92);
+    .px2bai(width,750,168);
+    .px2bai(height,560,76);
+    background: url(../images/circle_rect.png) no-repeat center;
+    background-size: contain;
+    color:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .3rem;
+  }
+  p{
+    position: absolute;
+    .px2bai(top,560,440);
+    left:0;
+    width: 100%;
+    text-align: center;
+    font-size: .34rem;
+    color: #fff;
+  }
+}
+
+//中间信用积分变化
+.credit-detail{
+  width: 100%;
+  .px2bai(height,1206,243);
+  background: #F4F7F9;
+  font-size: .34rem;
+  text-align: center;
+  padding:.6rem .35rem;
+  ul{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .2rem;
+  }
+}
+
+//底部规则解读和负面记录
+.footer{
+  width: 100%;
+  position: absolute;
+  .px2bai(bottom,1206,100);
+  display: flex;
+  font-size: .34rem;
+  li{
+    flex:1;
+    width: 50%;
+    text-align: center;
+  }
+  p{
+    margin-top: .3rem;
+  }
+  i{
+    width: .8rem;
+    height:.8rem;
+    display: inline-block;
+    background:no-repeat center;
+    background-size: contain;
+    &.rule{
+      background-image: url(../images/rule.png);
+    }
+    &.negative-record{
+      background-image: url(../images/negative-record.png);
+    }
+  }
+}

@@ -1,0 +1,118 @@
+@import "reset";
+@import "base";
+
+//定义混合宏
+.px2bai(@name,@height, @px) {
+  @{name}: @px / @height * 100%;
+}
+
+html, body, .riding {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+//顶部背景部分
+.riding-bg {
+  width: 100%;
+  .px2bai(height, 1294, 462);
+  background: url(../images/riding_bg.jpg) no-repeat;
+  background-size: 100% auto;
+  position: relative;
+  i {
+    position: absolute;
+    .px2bai(top, 462, 121);
+    top: 25%;
+    left: 2.03rem;
+    width: 3.22rem;
+    height: 1.26rem;
+    background: url(../images/riding_end.png);
+    background-size: contain;
+  }
+}
+
+//本次骑行内容
+.this-trip {
+  position: absolute;
+  top: 20%;
+  left: 1.15rem;
+  width: 5.2rem;
+  .px2bai(height, 1294, 730);
+  box-shadow: 0 .1rem .2rem rgba(0, 0, 0, .1);
+  border-radius: .36rem;
+  background: #fff url(../images/this-trip-bg.png) no-repeat center top;
+  background-size: contain;
+  .item1 {
+    margin-top: 1.2rem;
+    width: 100%;
+    .px2bai(height, 730, 363);
+    li {
+      width: 100%;
+      height: 33.3%;
+      padding: 0 5%;
+      border-bottom: 1px dashed #d9d9d9;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      i {
+        height: 50%;
+        width: 20%;
+        flex: 1;
+        background: no-repeat center;
+        background-size: contain;
+        &.xiao-fei {
+          background-image: url(../images/xiao_fei.png);
+        }
+        &.yu-he {
+          background-image: url(../images/yu_he.png);
+        }
+        &.xin-yong {
+          height: 45%;
+          background-image: url(../images/xin_yong.png);
+        }
+      }
+      span {
+        font-size: .34rem;
+        width: 40%;
+        text-align: center;
+        &.last {
+          color: #EC6A30;
+        }
+      }
+    }
+  }
+  .item2 {
+    width: 100%;
+    margin-top: .3rem;
+    display: flex;
+    li {
+      width: 100/3 *100%;
+      flex: 1;
+      text-align: center;
+      line-height: .45rem;
+      font-size: .3rem;
+      h1 {
+        color: #1495F0;
+      }
+      p {
+        color: #666;
+      }
+    }
+  }
+  .detail{
+    margin-top: .3rem;
+    text-align: center;
+    a{
+      color: #EC6A30;
+      font-size: .3rem;
+    }
+  }
+}
+
+//底部的ok按钮
+.btn-1495f0 {
+  position: absolute;
+  .px2bai(bottom, 1294, 120);
+  left: 1.25rem;
+}

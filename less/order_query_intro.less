@@ -1,0 +1,183 @@
+@import "reset";
+@import "base";
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  position: relative;
+}
+
+//头部部分
+header {
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  background: #fff;
+  width: 7.5rem;
+  z-index:1000;
+  .header {
+    margin: .3rem .63rem;
+    display: flex;
+    width: 6.24rem;
+    height: .58rem;
+    line-height: .58rem;
+    text-align: center;
+    border-radius: .1rem;
+    border: 1px solid @c-1495F0;
+    li {
+      flex: 1;
+      height: 100%;
+      &:first-child{
+        border-right: .02rem solid @c-1495F0;
+        border-top-left-radius: .05rem;
+        border-bottom-left-radius: .05rem;
+      }
+      &:last-child{
+        border-top-right-radius: .05rem;
+        border-bottom-right-radius: .05rem;
+      }
+      &.active {
+        background: @c-1495F0;
+        color: #fff;
+      }
+    }
+  }
+
+}
+
+//主体内容部分
+.main {
+  padding: .32rem 0 .6rem 0;
+  margin-top: 1.08rem;
+}
+
+//提交信息部分
+.submit-msg {
+  .sec {
+    font-size: .3rem;
+    &:not(:first-child) {
+      margin-top: .5rem;
+    }
+    h1 {
+      width: 6.24rem;
+      margin: 0 .63rem;
+      line-height: .52rem;
+    }
+    .toggle {
+      width: 7.5rem;
+      margin-top: .2rem;
+      li {
+        display: flex;
+        align-items: center;
+        width: 7.5rem;
+        height: 1.4rem;
+        background: #fff;
+        padding: 0 .8rem;
+        &.active {
+          background: #F4F7F9;
+        }
+        .weixin {
+          background: url(../images/weixin.png) no-repeat center;
+        }
+        .zhifubao {
+          background: url(../images/zhifubao.png) no-repeat center;
+        }
+        .icon {
+          width: .8rem;
+          height: .8rem;
+          background-size: contain;
+        }
+        span {
+          width: 4.6rem;
+          font-size: .34rem;
+          padding-left: .3rem;
+        }
+        .change {
+          width: .5rem;
+          height: .5rem;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-image: url(../images/unckeck.png);
+        }
+        .check {
+          background-image: url(../images/check.png);
+        }
+      }
+    }
+    .phone {
+      width: 6.24rem;
+      margin: .2rem .63rem 0;
+      i {
+        display: inline-block;
+        width: 1.1rem;
+        height: 1.11rem;
+        background: url(../images/phone.png) no-repeat center;
+        background-size: contain;
+        margin-right: .2rem;
+      }
+    }
+    .order-num {
+      display: block;
+      width: 6.24rem;
+      margin: .2rem .63rem 0;
+      background: #f8f8f8;
+      outline: 0;
+      border: 0;
+      height: .8rem;
+      border-radius: .27rem;
+      text-indent: .2rem;
+    }
+  }
+  footer {
+    margin-top: .8rem;
+    text-align: center;
+  }
+}
+
+//订单号查询
+.order-query {
+  display: none;
+  width: 6.24rem;
+  margin: 0 .63rem;
+  font-size: .3rem;
+  .sec {
+    line-height: .5rem;
+    &:last-child {
+      margin-top: .6rem;
+    }
+    h1 {
+      font-size: .34rem;
+    }
+    .order-img {
+      margin-top: .3rem;
+      display: flex;
+      justify-content: space-between;
+    }
+    .zhifubao {
+      width: 2.95rem;
+      height: 2.3rem;
+      background: no-repeat center;
+      background-size: contain;
+      &:nth-child(1) {
+        background-image: url(../images/zhifubao_1.png)
+      }
+      &:nth-child(2) {
+        background-image: url(../images/zhifubao_2.png)
+      }
+    }
+    .weixin {
+      width: 2.95rem;
+      height: 4rem;
+      background: no-repeat center;
+      background-size: contain;
+      &:nth-child(1) {
+        background-image: url(../images/weixin_1.png)
+      }
+      &:nth-child(2) {
+        background-image: url(../images/weixin_2.png)
+      }
+    }
+  }
+}

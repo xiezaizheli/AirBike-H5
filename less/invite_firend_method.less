@@ -1,0 +1,76 @@
+@import "reset";
+@import "base";
+
+html, body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #fff;
+}
+
+//背景信息
+.invite-bg {
+  position: relative;
+  width: 100%;
+  height: 70.9%;
+  background: url(../images/invite_bg.png) no-repeat center top;
+  background-size:cover;
+  text-align: center;
+  ul {
+    position: absolute;
+    left: 50%;
+    top: 44.44%;
+    transform: translate(-50%, 0);
+    li {
+      &:first-child {
+        font-size: .76rem;
+        color: #FB7354;
+        font-weight: 600;
+      }
+      &:last-child {
+        margin-top: .2rem;
+        font-size: .34rem;
+      }
+    }
+  }
+}
+
+//底部分享信息
+.share {
+  position: absolute;
+  bottom: .5rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: .34rem;
+  text-align: center;
+  ul {
+    margin: .5rem .25rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li {
+      flex: 1;
+      width: 1.75rem;
+    }
+    i {
+      width: 100%;
+      height: .78rem;
+      display: block;
+      margin-bottom: .2rem;
+      background: no-repeat center top;
+      background-size: contain;
+      &.firends {
+        background-image: url(../images/firends.png)
+      }
+      &.weixin {
+        background-image: url(../images/weixin-icon.png)
+      }
+      &.qq {
+        background-image: url(../images/qq.png)
+      }
+      &.weibo {
+        background-image: url(../images/weibo_icon.png)
+      }
+    }
+  }
+}

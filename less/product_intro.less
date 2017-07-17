@@ -1,0 +1,370 @@
+@import "reset";
+@import "base";
+
+//顶部固定部分
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  z-index: 1000;
+  .h-tab {
+    display: flex;
+    width: 6.24rem;
+    margin: .3rem .63rem;
+    height: .58rem;
+    border: 1px solid @c-1495F0;
+    border-radius: .1rem;
+    li {
+      flex: 1;
+      height: 100%;
+      line-height: .58rem;
+      font-size: .24rem;
+      color: @c-666;
+      text-align: center;
+      &:first-child{
+        border-top-left-radius: .05rem;
+        border-bottom-left-radius: .05rem;
+      }
+      &:last-child{
+        border-top-right-radius: .05rem;
+        border-bottom-right-radius: .05rem;
+      }
+      &.active {
+        background: #1495F0;
+        color: #ffffff;
+      }
+      &:nth-child(2) {
+        border-left: 1px solid #1495F0;
+        border-right: 1px solid #1495F0;
+      }
+    }
+  }
+}
+
+//主体部分
+.main {
+  margin-top: 1.08rem; //解决header部分fixed定位问题
+  padding-top: .58rem;
+  font-size: .3rem;
+  color: #333;
+  //公用的标题部分
+  .m-title {
+    width: 6.3rem;
+    margin: 0 auto;
+    text-align: center;
+    line-height: .5rem;
+    font-size: .3rem;
+    img {
+      margin-top: .67rem;
+    }
+  }
+  //公用的电源介绍
+  //电源介绍
+  .mes {
+    position: relative;
+    margin-top: 1rem;
+    font-size: .3rem;
+    width: 100%;
+    p {
+      position: absolute;
+      text-align: center;
+      line-height: .39rem;
+      &.m-first {
+        top: 5%;
+        right: 28%;
+      }
+      &.m-second {
+        top: 62%;
+        left: 10%;
+      }
+      &.m-third {
+        bottom: 16.5%;
+        right: 4%;
+      }
+    }
+  }
+}
+
+//产品介绍
+.product-intro {
+  width: 100%;
+  font-size: .26rem;
+  color: #333;
+  //标题部分及介绍
+  .title-intro {
+    width: 5.3rem;
+    margin: .3rem auto 0;
+    text-align: justify;
+    line-height: .4rem;
+  }
+  //零件介绍
+  .part-intro {
+    width: 6.24rem;
+    margin: .3rem auto 0;
+  }
+  .cont {
+    width: 100%;
+    margin-top: .3rem;
+    background: #F8F8F8;
+    box-shadow: 0 0 .1rem #ECEFF0;
+    border-radius: .1rem;
+    height: 3.4rem;
+    display: flex;
+    .c-left {
+      width: 50%;
+      flex: 1;
+      background: #fff;
+      padding: .65rem 0 .3rem 0;
+      text-align: center;
+      h2 {
+        color: @c-1495F0;
+        margin-bottom: .3rem;
+        line-height: .36rem;
+      }
+      img {
+        text-align: center;
+        width: 2.5rem;
+      }
+    }
+    .c-right {
+      width: 50%;
+      line-height: .45rem;
+      position: relative;
+      > ul {
+        position: absolute;
+        top: 50%;
+        left: .3rem;
+        transform: translate(0, -50%);
+      }
+    }
+  }
+  //电源介绍
+  .ele-intro {
+    margin-top: 1.33rem;
+    text-align: center;
+    h2 {
+      line-height: .45rem;
+      font-size: .3rem;
+    }
+    h1 {
+      font-size: .4rem;
+      margin-top: .69rem;
+    }
+  }
+  //底部
+  .footer {
+    text-align: center;
+    margin-top: 1.18rem;
+    background: #F8F8F8;
+    padding-top: .93rem;
+    padding-bottom: .8rem;
+    h1 {
+      font-size: .34rem;
+    }
+    .f-box {
+      margin-top: .7rem;
+      position: relative;
+      width: 100%;
+      height: 3.8rem;
+      margin-bottom: .5rem;
+      li {
+        position: absolute;
+        text-align: center;
+        &:nth-child(1) {
+          bottom: 0;
+          left: 0;
+        }
+        &:nth-child(2) {
+          top: 0;
+          left: 33%;
+        }
+        &:nth-child(3) {
+          right: 0;
+          bottom: 0;
+        }
+        img {
+          width: 50%;
+        }
+        p {
+          line-height: .45rem;
+        }
+      }
+    }
+  }
+}
+
+//产品说明部分
+.instruction {
+  display: none;
+  width: 5.9rem;
+  margin: 0 auto;
+  font-size: .26rem;
+  padding-bottom: .9rem;
+  .install-ele {
+    margin-top: .68rem;
+    .content {
+      > .title {
+        font-size: .28rem;
+        line-height: .52rem;
+      }
+      > span {
+        font-size: .26rem;
+        display: block;
+        width: .28rem;
+        float: left;
+        padding-top: .13rem;
+      }
+      p {
+        margin-left: .28rem;
+        line-height: .52rem;
+      }
+    }
+    .pt-67 {
+      padding-top: .67rem;
+    }
+  }
+  .play-app {
+    width: 100%;
+    margin: 1.2rem auto 0;
+    text-align: justify;
+    img {
+      max-width: 95%;
+    }
+    p {
+      margin-top: .55rem;
+      line-height: .52rem;
+      &.c-pink {
+        color: #ef8989;
+      }
+    }
+  }
+  .m-none {
+    margin: 0;
+  }
+}
+
+//AirPower电源
+.airpower {
+  display: none;
+  //标题部分及介绍
+  padding-bottom: .8rem;
+  .m-title {
+    width: 100% !important;
+    > ul {
+      display: flex;
+      width: 6.4rem;
+      margin: .7rem auto 0;
+      li {
+        width: 50%;
+        flex: 1;
+        text-align: center;
+        line-height: .5rem;
+        p {
+          color: #EC703B;
+          font-size: .34rem;
+        }
+      }
+    }
+  }
+  //飞机部分
+  .airplane {
+    margin-top: 1rem;
+    position: relative;
+    p {
+      position: absolute;
+      top: 0.81rem;
+      right: .63rem;
+      text-align: right;
+      line-height: .45rem;
+      color: #fff;
+    }
+  }
+  //配件部分
+  .parts {
+    width: 100%;
+    height: 2.7rem;
+    padding: .77rem 0;
+    text-align: center;
+    background: @c-1495F0;
+    color: #fff;
+    line-height: .45rem;
+  }
+  //电池保障
+  .ele-protect {
+    margin-top: .4rem;
+    text-align: center;
+    h1 {
+      padding-top: .34rem;
+      font-size: .34rem;
+      line-height: .5rem;
+    }
+    p {
+      line-height: .45rem;
+    }
+  }
+  //底部内容
+  .footer {
+    width: 100%;
+    margin: 1rem .15rem 0;
+    li {
+      float: left;
+      width: 2.4rem;
+      text-align: center;
+      margin-bottom: .7rem;
+      color: #8E9DAC;
+      i {
+        display: block;
+        width: .81rem;
+        height: .8rem;
+        margin: 0 auto;
+        background-repeat:no-repeat;
+        background-size:contain;
+      }
+      p {
+        margin-top: .2rem;
+        font-size: .26rem;
+      }
+      &:nth-child(1) i {
+        background-image: url(../images/dieluo-icon.png);
+      }
+      &:nth-child(2) i {
+        background-image: url(../images/wendu-icon.png);
+      }
+      &:nth-child(3) i {
+        background-image: url(../images/duanlu-icon.png);
+      }
+      &:nth-child(4) i {
+        background-image: url(../images/shurufanghu-icon.png);
+      }
+      &:nth-child(5) i {
+        background-image: url(../images/shuruguoya-icon.png);
+      }
+      &:nth-child(6) i {
+        background-image: url(../images/dianchiguohu-icon.png);
+      }
+      &:nth-child(7) i {
+        background-image: url(../images/shuruguoliu-icon.png);
+      }
+      &:nth-child(8) i {
+        background-image: url(../images/ptc-icon.png);
+      }
+      &:nth-child(9) i {
+        background-image: url(../images/shuchuguoya-icon.png);
+      }
+    }
+  }
+}
+
+//回到顶部按钮
+.return-top {
+  position: fixed;
+  right: 0.2rem;
+  bottom: 0.3rem;
+  z-index: 1000;
+  width: 1.5rem;
+  height:1.5rem;
+  background: url(../images/gotop.png);
+  background-size: contain;
+}

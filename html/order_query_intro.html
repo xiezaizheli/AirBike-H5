@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+  <meta name="format-detection" content="telephone=no, email=no"/>
+  <title>用户指南（订单号查询）</title>
+  <link rel="stylesheet" href="../css/order_query_intro.min.css"/>
+  <script src="../js/flexible.js"></script>
+</head>
+<body>
+<!--顶部切换按钮-->
+<header>
+  <ul class="header">
+    <li class="active">提交信息</li>
+    <li>订单号查询</li>
+  </ul>
+</header>
+
+<!--主体内容部分-->
+<div class="main">
+  <!--提交信息-->
+  <div class="submit-msg">
+    <div class="sec">
+      <h1>一. 选择支付渠道</h1>
+      <ul class="toggle">
+        <li class="active">
+          <i class="icon weixin"></i>
+          <span>微信支付</span>
+          <i class="change check"></i>
+        </li>
+        <li>
+          <i class="icon zhifubao"></i>
+          <span>微信支付</span>
+          <i class="change"></i>
+        </li>
+      </ul>
+    </div>
+    <div class="sec">
+      <h1>二. 请上传您的支付订单页截屏，确保订单号清晰可见</h1>
+      <div class="phone c-666"><i></i>上传订单截屏页面</div>
+    </div>
+    <div class="sec">
+      <h1>三. 填写支付订单号</h1>
+      <input class="order-num" type="text" placeholder="3158920311246"/>
+    </div>
+    <footer>
+      <a class="btn-1495f0" href="">提交</a>
+    </footer>
+  </div>
+  <!--订单号查询-->
+  <div class="order-query">
+    <div class="sec">
+      <h1>支付宝支付</h1>
+      <p>进入支付宝，点击左上角“账单”搜索AirBike</p>
+      <div class="order-img">
+        <i class="zhifubao"></i>
+        <i class="zhifubao"></i>
+      </div>
+    </div>
+    <div class="sec">
+      <h1>微信支付</h1>
+      <p>进入微信“钱包”，点击右上角菜单栏，进入“交易记录”，点击押金支付行。</p>
+      <div class="order-img">
+        <i class="weixin"></i>
+        <i class="weixin"></i>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="../plugins/zepto.js"></script>
+<script>
+  $(".header").on('click','li',function(){
+    var index =$(this).index();
+    $(this).addClass('active').siblings().removeClass('active');
+    $('.main').children().eq(index).show().siblings().hide();
+  });
+  $('.toggle').on('click','li',function(){
+    $(this).addClass("active").siblings().removeClass('active');
+    $(this).children('.change').addClass('check');
+    $(this).siblings().children('.change').removeClass('check');
+  });
+</script>
+</body>
+</html>

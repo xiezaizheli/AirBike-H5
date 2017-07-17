@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=0.5, maximum-scale=1.0, minimum-scale=1.0"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+  <meta name="format-detection" content="telephone=no, email=no"/>
+  <title>退款选择</title>
+  <link rel="stylesheet" href="../css/refund_option.min.css"/>
+  <script src="../js/flexible.js"></script>
+</head>
+<body>
+<!--退押金并退还移动电源-->
+<header class="header">
+  <div class="h-left">
+    <p class="c-blue">确认退款</p>
+    <p>退还押金并将AirPower退还至运营方</p>
+  </div>
+  <div class="h-right">
+    <img src="../images/refund_direction.png">
+</div>
+</header>
+
+<!--canvas绘图部分-->
+<div class="canvas-container">
+  <canvas id="refund" width="1688" height="1688">您的浏览器不支持canvas</canvas>
+  <div class="tip"></div>
+</div>
+
+<!--底部详情-->
+<footer class="footer">
+  <div class="toggle">
+    <p class="active">时间结算</p>
+    <p>金额结算</p>
+  </div>
+  <div class="box">
+    <div class="triangle-up"></div>
+    <ul class="time">
+      <li></li>
+      <li>使用时间：&nbsp;&nbsp;<span>2017/01/01</span></li>
+      <li>全额退款：&nbsp;&nbsp;<span>2017/01/25</span></li>
+      <li>折旧时间：&nbsp;&nbsp;<span>2017/01/26</span></li>
+      <li class="total">总计可退金额：&nbsp;&nbsp;<span>263</span>元</li>
+    </ul>
+    <ul class="price">
+      <li class="p-first">
+        <p>退款金额 = 电源押金 - 电源折旧金额 + 车辆押金</p>
+        <ul class="price-item">
+          <li>263元</li>
+          <li>180元</li>
+          <li>36元</li>
+          <li>119元</li>
+        </ul>
+      </li>
+      <li class="p-second">
+        <p>退款计算</p>
+        <ul>
+          <li>车辆押金：&nbsp;&nbsp;<span>119元</span></li>
+          <li>AirPower押金：&nbsp;&nbsp;<span>144元</span></li>
+        </ul>
+      </li>
+      <li class="total">总计可退金额：&nbsp;&nbsp;<span>263</span>元</li>
+    </ul>
+  </div>
+</footer>
+<script src="../plugins/jquery-1.11.3.js"></script>
+<script src="../js/refund_option.js"></script>
+</body>
+</html>

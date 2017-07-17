@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+  <meta name="format-detection" content="telephone=no, email=no"/>
+  <title>充值方式</title>
+  <link rel="stylesheet" href="../css/recharge_way.min.css"/>
+  <script src="../js/flexible.js"></script>
+</head>
+<body>
+<!--结束用车后押金可退-->
+<header>
+  <h1>0.0<span>元</span></h1>
+  <p>骑行结束后押金可退</p>
+</header>
+<!--中间微信和支付宝内容切换-->
+<ul class="toggle">
+  <li class="active">
+    <i class="icon weixin"></i>
+    <span>微信支付</span>
+    <i class="change check"></i>
+  </li>
+  <li>
+    <i class="icon zhifubao"></i>
+    <span>微信支付</span>
+    <i class="change"></i>
+  </li>
+</ul>
+<!--底部按钮-->
+<footer>
+  <p>点击去充值，即表示已阅读并同意<a class="c-1495F0" href="">《押金条款》</a></p>
+  <a class='btn-1495f0 m-t-40' href="">去充值</a>
+  <p class="c-666 m-t-40">当前押金0元</p>
+</footer>
+<script src="../plugins/zepto.js"></script>
+<script>
+  $('.toggle').on('click','li',function(){
+    $(this).addClass("active").siblings().removeClass('active');
+    $(this).children('.change').addClass('check');
+    $(this).siblings().children('.change').removeClass('check');
+  });
+</script>
+</body>
+</html>

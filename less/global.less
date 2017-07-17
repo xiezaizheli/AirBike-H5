@@ -1,0 +1,146 @@
+@import "reset";
+@import "base";
+
+/*
+  1.account_detail
+  2.credit_score_list
+  3.negative_record
+
+*/
+.no-account {
+  margin-top: 1.6rem;
+  text-align: center;
+  font-size: .34rem;
+  color: #bbb;
+  i {
+    display: inline-block;
+    width: 1.21rem;
+    height: 1.33rem;
+    background: url(../images/recharge.png) no-repeat center;
+    background-size: contain;
+    margin-bottom: .63rem;
+  }
+}
+
+.score-list {
+  display: none;
+  margin: .2rem 0 0 .4rem;
+  font-size: .3rem;
+  line-height: .5rem;
+  li {
+    height: 1.6rem;
+    border-bottom: 1px solid #eee;
+    padding: .3rem .5rem .4rem 0;
+  }
+  span {
+    float: right;
+  }
+}
+
+/*
+  1. credit_rule
+  2.despoit_intro
+  3.despoit_intro_user
+  4.despoit_refund_rule
+  5.despoit_refund_rule_user
+  6.find_no_car
+  7.recharge_intro
+
+*/
+.rule-title {
+  width: 6.7rem;
+  margin: .8rem .4rem 0;
+  font-size: .34rem;
+  border-left: 3px solid #1495f0;
+  padding-left: .2rem;
+}
+
+.rule-des {
+  width: 6.18rem;
+  font-size: .3rem;
+  line-height: .5rem;
+  margin: .45rem .66rem 0;
+  .cont {
+    margin-top: .25rem;
+    span {
+      display: block;
+      width: .4rem;
+      float: left;
+    }
+    p {
+      margin-left: .4rem;
+      text-align: justify;
+    }
+  }
+  //credit_rule独有部分
+  >p{
+    margin-top: .5rem;
+    color: #666;
+    line-height: .5rem;
+    text-align: justify;
+  }
+}
+
+footer {
+  text-align: center;
+}
+
+/*
+  1. about_Airbike
+  2.contact_us
+  3.unlock_problem
+*/
+//背景部分
+.user-bg {
+  width: 100%;
+  display: block;
+  height: 4.4rem;
+  background: url(../images/user-bg.png);
+  background-size: contain;
+}
+
+//主体部分
+.set-section {
+  //为了解决Android4.2版本以下不兼容margin：0 auto属性，
+  //width: 5.4rem;
+  //margin: 1.28rem auto 0;
+  margin:1.28rem 1rem 0;
+  font-size: .3rem;
+  color: #333;
+  h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .logo {
+      display: inline-block;
+      width: 1.91rem;
+      height: .44rem;
+      background: url(../images/logo.png);
+      background-size: contain;
+    }
+    b {
+      //about AirBike独有部分
+      display: inline-block;
+      width: 1.22rem;
+      height: .32rem;
+      line-height: .32rem;
+      border-radius: .27rem;
+      background: #9FD915;
+      margin-top: .1rem;
+      color: #fff;
+      text-align: center;
+      font-weight: 400;
+    }
+  }
+  p {
+    margin-top: .5rem;
+    line-height: .5rem;
+    text-align: justify;
+  }
+  //contact us 独有部分
+  ul {
+    margin-top: .8rem;
+    line-height: .5rem;
+  }
+}

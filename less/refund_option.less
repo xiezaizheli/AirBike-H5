@@ -1,0 +1,159 @@
+@import "reset";
+@import "base";
+
+//头部部分
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 1.8rem;
+  box-shadow: 0 0 .5rem #E9F3FA;
+  padding: 0 .5rem 0 .4rem;
+  .h-left {
+    font-size: .3rem;
+    line-height: .5rem;
+    .c-blue {
+      color: #1495f0;
+      font-size: .34rem;
+    }
+  }
+  .h-right {
+    img {
+      max-width: .24rem;
+    }
+  }
+}
+
+// canvas绘图部分
+.canvas-container {
+  text-align: center;
+  margin: 1.2rem auto 0;
+  position: relative;
+  .tip {
+    position: absolute;
+    top: 0;
+    width: 59%;//之前这里写的是1.65rem,不行，我就换成%了，就可以了，这是什么原因
+    height: .75rem;
+    line-height: .75rem;
+    text-align: center;
+    background: url(../images/refund_tip.png) no-repeat 0 0;
+    background-size: contain;
+    color: #fff;
+    font-size: .3rem;
+    padding-left: .12rem;
+  }
+}
+
+//底部切换部分
+.footer{
+  position: fixed;
+  bottom:0;
+  left:0;
+  width: 100%;
+  //切换部分
+  .toggle{
+    color: #b0b5b9;
+    font-size: .34rem;
+    line-height: .52rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+      width: 50%;
+      text-align: center;
+      &.active{
+        color: #2c6bbb;
+      }
+    }
+  }
+  //容器部分
+  .box{
+    margin-top: .3rem;
+    height: 4.5rem;
+    width: 100%;
+    font-size: .3rem;
+    color: #d8e3ed;
+    position: relative;
+    .total{
+      height: 1.5rem !important;
+      line-height: 1.5rem !important;
+      font-size: .4rem;
+      color: #fff !important;
+      background: #2C6BBB;
+      text-align: center;
+    }
+    //倒三角部分
+    .triangle-up {
+      width: 0;
+      height: 0;
+      border-left: .2rem solid transparent;
+      border-right: .2rem solid transparent;
+      border-bottom: .2rem solid #2c6bbb;
+      position: absolute;
+      top:-.15rem;
+      left:1.725rem;
+    }
+  }
+  //时间结算
+  .time{
+    height: 4.5rem;
+    li{
+      text-align: center;
+      &:nth-child(2n){
+        background: #3773BE;
+        height: .8rem;
+        line-height: .75rem;
+      }
+      &:nth-child(2n-1){
+        background: #2C6BBB;
+        height: .7rem;
+        line-height: .7rem;
+      }
+    }
+  }
+  //金额结算
+  .price{
+    height: 4.5rem;
+    .p-first{
+      height: 1.8rem;
+      padding: .6rem .5rem 0;
+      background: #2C6BBB;
+      white-space: nowrap;
+      line-height: .52rem;
+      .price-item{
+        display: inline-flex;
+        li{
+          text-align: center;
+          &:nth-child(1){
+            width: 1.28rem;
+          }
+          &:nth-child(2){
+            width: 1.9rem;
+          }
+          &:nth-child(3){
+            width: 1.85rem;
+          }
+          &:nth-child(4){
+            width: 1.6rem;
+            padding-left: .4rem;
+          }
+        }
+      }
+    }
+    .p-second{
+      background: #3773BE;
+      height: 1.2rem;
+      padding: 0 .5rem;
+      line-height: .5rem;
+      p{
+        padding-top: .1rem;
+      }
+      ul{
+        display: flex;
+        justify-content: space-between;
+
+      }
+    }
+  }
+}

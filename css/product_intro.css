@@ -1,0 +1,854 @@
+/**
+ * Resets
+ * --------------------------------------------------
+ * Adapted from normalize.css and some reset.css. We don't care even one
+ * bit about old IE, so we don't need any hacks for that in here.
+ *
+ * There are probably other things we could remove here, as well.
+ *
+ * normalize.css v2.1.2 | MIT License | git.io/normalize
+
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+i,
+u,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+fieldset,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font: inherit;
+  font-size: 100%;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+/**
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+script {
+  display: none !important;
+}
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *  user zoom.
+ */
+html {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: sans-serif;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100% /* 2 */;
+}
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+  line-height: 1;
+}
+/**
+ * Remove default outlines.
+ */
+a,
+button,
+:focus,
+a:focus,
+button:focus,
+a:active,
+a:hover {
+  outline: 0;
+}
+/* *
+ * Remove tap highlight color
+ */
+a {
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a[href]:hover {
+  cursor: pointer;
+}
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-size: 1em;
+  font-family: monospace, serif;
+}
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre-wrap;
+}
+/**
+ * Set consistent quote types.
+ */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  position: relative;
+  vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+  border: 1px solid #c0c0c0;
+}
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  padding: 0;
+  /* 2 */
+  border: 0 /* 1 */;
+}
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ * 4. Remove any default :focus styles
+ * 5. Make sure webkit font smoothing is being inherited
+ * 6. Remove default gradient in Android Firefox / FirefoxOS
+ */
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  /* 3 */
+  font-size: 100%;
+  /* 2 */
+  font-family: inherit;
+  /* 1 */
+  outline-offset: 0;
+  /* 4 */
+  outline-style: none;
+  /* 4 */
+  outline-width: 0;
+  /* 4 */
+  -webkit-font-smoothing: inherit;
+  /* 5 */
+  background-image: none /* 6 */;
+}
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `importnt` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none;
+}
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *  and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *  `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  /* 3 */
+  -webkit-appearance: button /* 2 */;
+}
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *  (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  /* 2 */
+  box-sizing: content-box;
+  -webkit-appearance: textfield /* 1 */;
+}
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top /* 2 */;
+}
+img {
+  -webkit-user-drag: none;
+}
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+/**
+ * Scaffolding
+ * --------------------------------------------------
+ */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  word-wrap: break-word;
+  font-family: -apple-system;
+  font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-backface-visibility: hidden;
+  -webkit-user-drag: none;
+  -ms-content-zooming: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  font-family: 'Microsoft Yahei', arial, "arial black";
+  font-size: .26rem;
+  color: #333;
+}
+@media screen and (min-width: 640px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 414px) and (max-width: 639px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 413px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  html {
+    font-size: 13px;
+  }
+}
+.clearfix:before,
+.clearfix:after {
+  content: ' ';
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.m-t-20 {
+  margin-top: .2rem !important;
+}
+.m-t-30 {
+  margin-top: .3rem !important;
+}
+.m-t-40 {
+  margin-top: .4rem !important;
+}
+.m-t-60 {
+  margin-top: .6rem !important;
+}
+.m-b-80 {
+  margin-bottom: .8rem !important;
+}
+.f-s-24 {
+  font-size: .24rem !important;
+}
+.f-s-30 {
+  font-size: .3rem !important;
+}
+.f-s-34 {
+  font-size: .34rem !important;
+}
+.p-t-30 {
+  padding-top: .3rem !important;
+}
+.c-666 {
+  color: #666 !important;
+}
+.c-1495F0 {
+  color: #1495F0 !important;
+}
+.c-EC6A30 {
+  color: #EC6A30 !important;
+}
+.c-5DB751 {
+  color: #5DB751 !important;
+}
+a {
+  text-decoration: none;
+  color: #666;
+  font-size: .24rem;
+}
+a:hover {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+.btn-1495f0 {
+  display: inline-block;
+  width: 5rem;
+  height: .88rem;
+  line-height: .88rem;
+  background: #1495F0;
+  border-radius: .44rem;
+  text-align: center;
+  color: #fff;
+  font-size: .34rem;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  z-index: 1000;
+}
+header .h-tab {
+  display: flex;
+  width: 6.24rem;
+  margin: .3rem .63rem;
+  height: .58rem;
+  border: 1px solid #1495F0;
+  border-radius: .1rem;
+}
+header .h-tab li {
+  flex: 1;
+  height: 100%;
+  line-height: .58rem;
+  font-size: .24rem;
+  color: #666;
+  text-align: center;
+}
+header .h-tab li:first-child {
+  border-top-left-radius: .05rem;
+  border-bottom-left-radius: .05rem;
+}
+header .h-tab li:last-child {
+  border-top-right-radius: .05rem;
+  border-bottom-right-radius: .05rem;
+}
+header .h-tab li.active {
+  background: #1495F0;
+  color: #ffffff;
+}
+header .h-tab li:nth-child(2) {
+  border-left: 1px solid #1495F0;
+  border-right: 1px solid #1495F0;
+}
+.main {
+  margin-top: 1.08rem;
+  padding-top: .58rem;
+  font-size: .3rem;
+  color: #333;
+}
+.main .m-title {
+  width: 6.3rem;
+  margin: 0 auto;
+  text-align: center;
+  line-height: .5rem;
+  font-size: .3rem;
+}
+.main .m-title img {
+  margin-top: .67rem;
+}
+.main .mes {
+  position: relative;
+  margin-top: 1rem;
+  font-size: .3rem;
+  width: 100%;
+}
+.main .mes p {
+  position: absolute;
+  text-align: center;
+  line-height: .39rem;
+}
+.main .mes p.m-first {
+  top: 5%;
+  right: 28%;
+}
+.main .mes p.m-second {
+  top: 62%;
+  left: 10%;
+}
+.main .mes p.m-third {
+  bottom: 16.5%;
+  right: 4%;
+}
+.product-intro {
+  width: 100%;
+  font-size: .26rem;
+  color: #333;
+}
+.product-intro .title-intro {
+  width: 5.3rem;
+  margin: .3rem auto 0;
+  text-align: justify;
+  line-height: .4rem;
+}
+.product-intro .part-intro {
+  width: 6.24rem;
+  margin: .3rem auto 0;
+}
+.product-intro .cont {
+  width: 100%;
+  margin-top: .3rem;
+  background: #F8F8F8;
+  box-shadow: 0 0 .1rem #ECEFF0;
+  border-radius: .1rem;
+  height: 3.4rem;
+  display: flex;
+}
+.product-intro .cont .c-left {
+  width: 50%;
+  flex: 1;
+  background: #fff;
+  padding: .65rem 0 .3rem 0;
+  text-align: center;
+}
+.product-intro .cont .c-left h2 {
+  color: #1495F0;
+  margin-bottom: .3rem;
+  line-height: .36rem;
+}
+.product-intro .cont .c-left img {
+  text-align: center;
+  width: 2.5rem;
+}
+.product-intro .cont .c-right {
+  width: 50%;
+  line-height: .45rem;
+  position: relative;
+}
+.product-intro .cont .c-right > ul {
+  position: absolute;
+  top: 50%;
+  left: .3rem;
+  transform: translate(0, -50%);
+}
+.product-intro .ele-intro {
+  margin-top: 1.33rem;
+  text-align: center;
+}
+.product-intro .ele-intro h2 {
+  line-height: .45rem;
+  font-size: .3rem;
+}
+.product-intro .ele-intro h1 {
+  font-size: .4rem;
+  margin-top: .69rem;
+}
+.product-intro .footer {
+  text-align: center;
+  margin-top: 1.18rem;
+  background: #F8F8F8;
+  padding-top: .93rem;
+  padding-bottom: .8rem;
+}
+.product-intro .footer h1 {
+  font-size: .34rem;
+}
+.product-intro .footer .f-box {
+  margin-top: .7rem;
+  position: relative;
+  width: 100%;
+  height: 3.8rem;
+  margin-bottom: .5rem;
+}
+.product-intro .footer .f-box li {
+  position: absolute;
+  text-align: center;
+}
+.product-intro .footer .f-box li:nth-child(1) {
+  bottom: 0;
+  left: 0;
+}
+.product-intro .footer .f-box li:nth-child(2) {
+  top: 0;
+  left: 33%;
+}
+.product-intro .footer .f-box li:nth-child(3) {
+  right: 0;
+  bottom: 0;
+}
+.product-intro .footer .f-box li img {
+  width: 50%;
+}
+.product-intro .footer .f-box li p {
+  line-height: .45rem;
+}
+.instruction {
+  display: none;
+  width: 5.9rem;
+  margin: 0 auto;
+  font-size: .26rem;
+  padding-bottom: .9rem;
+}
+.instruction .install-ele {
+  margin-top: .68rem;
+}
+.instruction .install-ele .content > .title {
+  font-size: .28rem;
+  line-height: .52rem;
+}
+.instruction .install-ele .content > span {
+  font-size: .26rem;
+  display: block;
+  width: .28rem;
+  float: left;
+  padding-top: .13rem;
+}
+.instruction .install-ele .content p {
+  margin-left: .28rem;
+  line-height: .52rem;
+}
+.instruction .install-ele .pt-67 {
+  padding-top: .67rem;
+}
+.instruction .play-app {
+  width: 100%;
+  margin: 1.2rem auto 0;
+  text-align: justify;
+}
+.instruction .play-app img {
+  max-width: 95%;
+}
+.instruction .play-app p {
+  margin-top: .55rem;
+  line-height: .52rem;
+}
+.instruction .play-app p.c-pink {
+  color: #ef8989;
+}
+.instruction .m-none {
+  margin: 0;
+}
+.airpower {
+  display: none;
+  padding-bottom: .8rem;
+}
+.airpower .m-title {
+  width: 100% !important;
+}
+.airpower .m-title > ul {
+  display: flex;
+  width: 6.4rem;
+  margin: .7rem auto 0;
+}
+.airpower .m-title > ul li {
+  width: 50%;
+  flex: 1;
+  text-align: center;
+  line-height: .5rem;
+}
+.airpower .m-title > ul li p {
+  color: #EC703B;
+  font-size: .34rem;
+}
+.airpower .airplane {
+  margin-top: 1rem;
+  position: relative;
+}
+.airpower .airplane p {
+  position: absolute;
+  top: 0.81rem;
+  right: .63rem;
+  text-align: right;
+  line-height: .45rem;
+  color: #fff;
+}
+.airpower .parts {
+  width: 100%;
+  height: 2.7rem;
+  padding: .77rem 0;
+  text-align: center;
+  background: #1495F0;
+  color: #fff;
+  line-height: .45rem;
+}
+.airpower .ele-protect {
+  margin-top: .4rem;
+  text-align: center;
+}
+.airpower .ele-protect h1 {
+  padding-top: .34rem;
+  font-size: .34rem;
+  line-height: .5rem;
+}
+.airpower .ele-protect p {
+  line-height: .45rem;
+}
+.airpower .footer {
+  width: 100%;
+  margin: 1rem .15rem 0;
+}
+.airpower .footer li {
+  float: left;
+  width: 2.4rem;
+  text-align: center;
+  margin-bottom: .7rem;
+  color: #8E9DAC;
+}
+.airpower .footer li i {
+  display: block;
+  width: .81rem;
+  height: .8rem;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.airpower .footer li p {
+  margin-top: .2rem;
+  font-size: .26rem;
+}
+.airpower .footer li:nth-child(1) i {
+  background-image: url(../images/dieluo-icon.png);
+}
+.airpower .footer li:nth-child(2) i {
+  background-image: url(../images/wendu-icon.png);
+}
+.airpower .footer li:nth-child(3) i {
+  background-image: url(../images/duanlu-icon.png);
+}
+.airpower .footer li:nth-child(4) i {
+  background-image: url(../images/shurufanghu-icon.png);
+}
+.airpower .footer li:nth-child(5) i {
+  background-image: url(../images/shuruguoya-icon.png);
+}
+.airpower .footer li:nth-child(6) i {
+  background-image: url(../images/dianchiguohu-icon.png);
+}
+.airpower .footer li:nth-child(7) i {
+  background-image: url(../images/shuruguoliu-icon.png);
+}
+.airpower .footer li:nth-child(8) i {
+  background-image: url(../images/ptc-icon.png);
+}
+.airpower .footer li:nth-child(9) i {
+  background-image: url(../images/shuchuguoya-icon.png);
+}
+.return-top {
+  position: fixed;
+  right: 0.2rem;
+  bottom: 0.3rem;
+  z-index: 1000;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url(../images/gotop.png);
+  background-size: contain;
+}

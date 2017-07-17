@@ -1,0 +1,47 @@
+@import "reset";
+@import "base";
+
+//无行程记录
+.no-trip{
+  margin-top: 2.42rem;
+  font-size: .34rem;
+  color: #bbb;
+  text-align: center;
+}
+
+.trip-list{
+  display: none;
+  margin-left: .4rem;
+  width: 100%;
+  li{
+    height: 2.04rem;
+    padding:.4rem;
+    padding-left: 0;
+    font-size: .34rem;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    .date{
+      font-size: .3rem;
+      color: #C5C5C5;
+    }
+    .bike-detail{
+      width: 100%;
+      margin-top: .2rem;
+      display: flex;
+      justify-content: space-between;
+      span{
+        width: 50%;
+      }
+      a{
+        display: inline-block;
+        width: .18rem;
+        height:.3rem;
+        background: url(../images/xiaojiantou.png) no-repeat center;
+        background-size: contain;
+      }
+    }
+    .trip-time{
+      margin-top: .2rem;
+    }
+  }
+}

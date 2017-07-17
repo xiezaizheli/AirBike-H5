@@ -1,0 +1,17 @@
+{
+  "status": 1,
+  "message": "获取信用积分列表成功！",
+  "result": {
+    "page": "2",
+    "count": "1",
+    "list":{
+      "id": "36",
+      "user_id": "1",
+      "relative_type": "credit_points",
+      "relative_model_class": "UserReports",
+      "relative_amount": "10.00",
+      "relative_model_id": "12",
+      "created": "2016-12-07 14:23:04"
+    }
+  }
+}

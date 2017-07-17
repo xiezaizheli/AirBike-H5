@@ -1,0 +1,62 @@
+@import "reset";
+@import "base";
+
+//定义混合宏
+.px2bai(@name, @height,@px) {
+  @{name}: @px /@height *100%;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+//主体内容
+.container {
+  width: 5rem;
+  margin: 1.58rem auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  .tip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .44rem;
+    color: #1495f0;
+    font-weight: 300;
+    i {
+      margin-right: .2rem;
+      width: .5rem;
+      height: .5rem;
+      background: url(../images/check.png) no-repeat 0 0;
+      background-size: contain;
+    }
+  }
+  li {
+    width: 100%;
+    text-align: center;
+    font-size: .34rem;
+  }
+  .addr {
+    margin-top: 1.2rem;
+    background: #1495f0;
+    color: #fff;
+    width: 100%;
+    padding: .28rem 0;
+    border-radius: .44rem;
+    border: 1px solid #1495f0;
+  }
+  .no-need {
+    margin-top: .3rem;
+    background: #fff;
+    color: #1495f0;
+    width: 100%;
+    padding: .28rem 0;
+    border-radius: .44rem;
+    border: 1px solid #1495f0;
+  }
+}

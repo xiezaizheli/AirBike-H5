@@ -1,0 +1,72 @@
+@import "reset";
+@import "base";
+
+//公司地址部分
+.address{
+  position: relative;
+  width: 6.66rem;
+  height:3.02rem;
+  margin: .4rem .42rem 0;
+  background: url(../images/shadow.png) no-repeat;
+  background-size: contain;
+  .content{
+    position: absolute;
+    top:.74rem;
+    left:.72rem;
+    text-align: center;
+    h1{
+      display: flex;
+      font-size: .34rem;
+      i{
+        width: .3rem;
+        height:.4rem;
+        margin-right: .2rem;
+        background: url(../images/water.png) no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}
+
+//详细内容区
+.detail{
+  margin: .4rem 0 0 .65rem;
+  font-size: .3rem;
+  li{
+    height:1rem;
+    line-height: 1rem;
+    border-bottom: 1px solid #e7e7e7;
+    &.no-border{
+      border: 0;
+    }
+    &.leave-msg{
+      border: 0;
+      width: 6.18rem;
+      height:2.55rem;
+      margin-top: .2rem;
+      textarea{
+        width: 6.18rem;
+        height:2.55rem;
+        background: #f8f8f8;
+        border-radius: .27rem;
+        border: 0;
+        outline: 0;
+        color:#bbb;
+        text-indent: .2rem;
+        resize : none;
+      }
+    }
+    input{
+      border: 0;
+      outline: 0;
+      width: 5rem;
+      text-indent: .2rem;
+    }
+  }
+}
+
+//底部信息
+footer{
+  margin: .6rem 0;
+  text-align: center;
+}
